@@ -12,7 +12,7 @@ function delay(ms) {
 function logToConsole(message) {
     const time = new Date().toLocaleTimeString();
     console.value += `[${time}] ${message}\n`;
-    console.scrollTop = console.scrollHeight; // auto scroll down
+    console.scrollTop = console.scrollHeight;
 }
 
 
@@ -31,4 +31,16 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => logToConsole('User John deposited $500.'), 2000);
     setTimeout(() => logToConsole('Balance updated: $1500.'), 3000);
     setTimeout(() => clearConsole(), 4000);
+});
+
+document.getElementById('convert-btn').addEventListener('click', () => {
+    const amount = parseFloat(document.getElementById('input-balance').value);
+    const currency = document.getElementById('input-currency').value;
+    let rate = 1;
+    switch (currency) {
+        case 'usd': rate = 36.7; break;
+        case 'eur': rate = 39.5; break;
+        case 'jpy': rate = 0.25; break;
+    }
+    document.getElementById('output-balance').value = (amount * rate).toFixed(2);
 });

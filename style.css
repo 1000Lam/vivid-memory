@@ -1,5 +1,5 @@
 nav {
-  background-color: #0d6efd;
+  background-color: rgb(13, 110, 253);
   color: white;
   display: flex;
   justify-content: space-between;
@@ -12,23 +12,24 @@ nav {
   max-width: 100%;
   margin: auto;
   background: #111;
-  border-radius: 6px;
+  border-radius: 10px;
   resize: none;
 }
 
 .console-header {
   background: #222;
-  padding: 8px 10px;
+  padding: 5px;
   display: flex;
   gap: 6px;
   align-items: center;
-    resize: none;
+  resize: none;
+  border-radius: 10px;
 }
 
 .console-header .dot {
   width: 12px;
   height: 12px;
-  border-radius: 50%;
+  border-radius: 10px;
   display: inline-block;
   resize: none;
 }
@@ -45,6 +46,7 @@ nav {
   width: 100%;
   height: 300px;
   border: none;
+  border-radius: 10px;
   padding: 10px;
   resize: none;
   outline: none;
@@ -59,10 +61,116 @@ nav {
   justify-content: left;
   gap: 15px;
   margin-bottom: 10px;
-  resize: none;
 }
 
-.bank-logo{
+.welcome-logo{
   width: 80px;
   height: inherit;
+}
+
+.footers{
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 10px;
+  padding: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.footers-section {
+  display: flex;
+  flex-direction: column;
+  background: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1;
+  box-sizing: border-box;
+}
+
+.tabs{
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 5px;
+  margin-right: auto;
+  line-height: 0.4;
+}
+
+.tabs-logo{
+  object-fit: cover;
+  height: auto;
+}
+
+.field{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0;
+}
+
+.field label{
+  width: 120px;
+  font-weight: bold;
+}
+
+.field input,.field select{
+  padding: 4px;
+  font-size: 12px;
+  border-width: 1px;
+  border-color: #CCCCCC;
+  background-color: #FFFFFF;
+  color: #000000;
+  border-style: solid;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(66,66,66,.75);
+  text-shadow: 0px 0px 5px rgba(66,66,66,.01);
+}
+
+.field input[read-only]{
+  padding: 4px;
+  font-size: 12px;
+  border-width: 1px;
+  border-color: #cccccc50;
+  background-color: #e9e9e9;
+  color: #000000;
+  border-style: solid;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(66,66,66,.75);
+  cursor: not-allowed;
+}
+
+input[type=number] {
+  appearance: textfield;
+}
+
+button {
+  font-size: 12px;
+  font-weight: normal;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  background: #FFFFFF;
+  box-sizing: border-box;
+}
+
+.button_top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 4px 8px;
+  background: #e8e8e8;
+  color: #000000;
+  box-sizing: border-box;
+  transform: none;
+  transition: transform 0.1s ease;
+}
+
+button:hover .button_top {
+  transform: translateY(-1px);
+}
+
+button:active .button_top {
+  transform: translateY(1px);
 }

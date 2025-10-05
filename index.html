@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
-<body>
+<body style="background-color: rgba(7, 55, 127, 0.805)">
     <nav>
         <div class="left">68070044</div>
         <div class="center">ITF Website</div>
@@ -17,9 +17,9 @@
     <main>
         <section class="Welcome-text">
             <div class="Welcome-wrapper">
-                <img src="images/niko.gif" alt="niko" class="bank-logo">
+                <img src="images/niko.gif" alt="niko" class="welcome-logo">
                 <div>
-                    <h1> Simple Bank</h1>
+                    <h1>Simple Bank</h1>
                     <p>I don't understand a single thing in class</p>
                 </div>
             </div>
@@ -30,6 +30,48 @@
                     <span class="dot green"></span>
                 </div>
                 <textarea id="console" disabled></textarea>
+            </div>
+        </section>
+        <section class="footers">
+            <div class="footers-section">
+                <h1>Account Overiew</h1>
+                <div class="tabs">
+                    <img src="images/niko.gif" alt="niko" class="tabs-logo">
+                    <div>
+                        <h2>Account Information</h2>
+                        <p>Name: Jason Seer</p>
+                        <p>Type: shit</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footers-section">
+                <h1>Financial Tools</h1>
+                <div class="tabs">
+                    <img src="images/niko.gif" alt="niko" class="tabs-logo">
+                    <div>
+                        <h2>Currency Converter</h2>
+                        <div class="field">
+                            <label for="input-balance">Input balance:</label>
+                            <input type="number" id="input-balance" placeholder="0">
+                        </div>
+                        <div class="field">
+                            <label for="output-balance">Output balance:</label>
+                            <input type="number" id="output-balance" readonly placeholder="0">
+                        </div>
+                        <div class="field">
+                            <label for="input-currency">Input currency:</label>
+                            <select id="input-currency">
+                                <option value="usd">USD</option>
+                                <option value="eur">EUR</option>
+                                <option value="thb">THB</option>
+                                <option value="usd">JPY</option>
+                            </select>
+                            <button id="convert-btn">
+                                <span class="button_top"> Convert </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
