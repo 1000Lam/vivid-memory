@@ -91,10 +91,11 @@ nav {
 .tabs{
   align-items: center;
   display: flex;
+  flex-direction: row;
   gap: 10px;
   margin-bottom: 5px;
   margin-right: auto;
-  line-height: 0.4;
+  line-height: 1.2;
 }
 
 .tabs-logo{
