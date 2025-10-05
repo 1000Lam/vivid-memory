@@ -1,5 +1,34 @@
 const amongus = document.getElementById("amongus")
+const console = document.getElementById('console');
 
 function add(){
     amongus.value = Number(amongus.value) + 25
 }
+
+function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function logToConsole(message) {
+    const time = new Date().toLocaleTimeString();
+    console.value += `[${time}] ${message}\n`;
+    console.scrollTop = console.scrollHeight; // auto scroll down
+}
+
+
+
+async function clearConsole() {
+    console.value = "";
+    logToConsole("Console cleared.");
+    await delay(1000);
+    console.value = "";
+}
+
+// test
+document.addEventListener('DOMContentLoaded', () => {
+    logToConsole('System initialized.');
+    setTimeout(() => logToConsole('Connected to bank server.'), 1000);
+    setTimeout(() => logToConsole('User John deposited $500.'), 2000);
+    setTimeout(() => logToConsole('Balance updated: $1500.'), 3000);
+    setTimeout(() => clearConsole(), 4000);
+});
